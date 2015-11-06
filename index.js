@@ -1,5 +1,6 @@
 module.exports = {
-    ru: require('./ru'),
     by: require('./by'),
+    de: require('./de'),
+    ru: require('./ru'),
     uk: require('./uk')
 };
