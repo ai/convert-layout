@@ -42,6 +42,7 @@ Supported keyboard layouts:
 
 * Belarusian
 * English QWERTY
+* German
 * Russian
 * Ukrainian
 
