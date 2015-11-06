@@ -27,6 +27,10 @@ describe('convert-layout', function () {
             expect(ru.toEn('ЕУЫЕ№')).to.eql('TEST#');
         });
 
+        it('ignores unknown symbols', function () {
+            expect(ru.toEn('test!')).to.eql('test!');
+        });
+
     });
 
 });
