@@ -1,6 +1,6 @@
 # Convert Layout [![Build Status][ci-img]][ci]
 
-Convert keyboard layouts, when user forget to change it.
+Converts keyboard layouts, when user forgot to change it.
 
 [ci-img]: https://travis-ci.org/ai/convert-layout.svg
 [ci]:     https://travis-ci.org/ai/convert-layout
@@ -15,22 +15,21 @@ bankcardName.keyup(function () {
 
 ## Usage
 
-There are 2 ways to load layout data. If you need only one layout,
+There are 2 ways to load layout. If you need only one layout,
 just load file directly:
 
 ```js
 var ru = require('convert-layout/ru');
 ```
 
-But you can get objects with all layouts:
+Also you can get objects with all layouts:
 
 ```js
 var layouts = require('convert-layout');
 layout = layouts[name];
 ```
 
-This project uses English Qwerty layout as base for any transformations.
-So every layout has `fromEn` and `toEn` methods:
+Every layout has `fromEn` and `toEn` methods:
 
 ```js
 ru.toEn('руддщ')    //=> "hello"
