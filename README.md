@@ -45,6 +45,7 @@ Supported keyboard layouts:
 * German
 * Kazakh
 * Russian
+* Spanish
 * Ukrainian
 
 If you want to add new keyboard layout:
