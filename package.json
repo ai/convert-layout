@@ -1,0 +1,23 @@
+{
+  "name": "convert-layout",
+  "version": "0.0.0",
+  "description": "Convert keyboard layouts, when user forget to change it",
+  "keywords": [
+    "keyboard",
+    "keyboard layout",
+    "russian",
+    "english",
+    "change"
+  ],
+  "author": "Andrey Sitnik <andrey@sitnik.ru>",
+  "license": "MIT",
+  "repository": "ai/convert-layout",
+  "devDependencies": {
+    "eslint": "1.8.0",
+    "mocha":  "2.3.3",
+    "chai":   "3.4.0"
+  },
+  "scripts": {
+    "test": "mocha && eslint *.js"
+  }
+}
