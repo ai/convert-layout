@@ -50,4 +50,5 @@ If you want to add new keyboard layout:
    Lower case letters will be converted to upper case automatically.
    But all non-letters symbol should be added in both cases.
 3. Add `CODE` key to `index.js`.
-4. Send a pull request.
+4. Add layout to list above.
+5. Send a pull request.
