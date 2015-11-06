@@ -87,7 +87,6 @@
     "comma-style":                 [2],
     "brace-style":                 [2],
     "no-debugger":                 [2],
-    "quote-props":                 [2, "consistent-as-needed"],
     "no-iterator":                 [2],
     "no-new-func":                 [2],
     "key-spacing":                 [2, { "align": "value" }],
@@ -114,7 +113,7 @@
     "new-cap":                     [2],
     "eqeqeq":                      [2],
     "no-new":                      [2],
-    "quotes":                      [2, "single"],
+    "quotes":                      [2, "single", "avoid-escape"],
     "indent":                      [2, 4],
     "semi":                        [2, "always"],
     "yoda":                        [2, "never"]
