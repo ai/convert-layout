@@ -1,3 +1,5 @@
 module.exports = {
-    ru: require('./ru')
+    ru: require('./ru'),
+    by: require('./by'),
+    ua: require('./ua')
 };
