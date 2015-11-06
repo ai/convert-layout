@@ -40,8 +40,10 @@ ru.fromEn('ghbdtn') //=> "привет"
 
 Supported keyboard layouts:
 
-* English QWERTY.
+* Belarusian
+* English QWERTY
 * Russian
+* Ukrainian
 
 If you want to add new keyboard layout:
 
