@@ -1,7 +1,7 @@
 module.exports = {
     by: require('./by'),
     de: require('./de'),
-    kz: require('./kz'),
+    kk: require('./kk'),
     ru: require('./ru'),
     uk: require('./uk')
 };
