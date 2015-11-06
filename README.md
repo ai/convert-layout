@@ -42,6 +42,7 @@ Supported keyboard layouts:
 
 * English QWERTY.
 * Russian
+* German
 
 If you want to add new keyboard layout:
 
