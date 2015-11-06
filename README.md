@@ -43,6 +43,7 @@ Supported keyboard layouts:
 * Belarusian
 * English QWERTY
 * German
+* Kazakh
 * Russian
 * Ukrainian
 
