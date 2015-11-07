@@ -1,3 +1,7 @@
+## 0.4
+* Add Spanish layout (by Ismael Martínez).
+* Add Kazakh layout (by cyhalothrin).
+
 ## 0.3
 * Add German layout (by Yury Lebedev).
 
