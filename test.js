@@ -1,36 +1,34 @@
-var main = require('./');
-var ru   = require('./ru');
+import test from 'ava';
 
-var expect = require('chai').expect;
+import main from './';
+import ru   from './ru';
 
-describe('convert-layout', function () {
+test('has all languages in index', t => {
+    t.same(main.ru, ru);
+    t.end();
+});
 
-    it('has all languages in index', function () {
-        expect(main.ru).to.eql(ru);
-    });
+test('converts lowers to English', t => {
+    t.same(ru.fromEn('ntcn/'), 'тест.');
+    t.end();
+});
 
-    describe('ru', function () {
+test('converts uppers to English', t => {
+    t.same(ru.fromEn('NTCN?&'), 'ТЕСТ,?');
+    t.end();
+});
 
-        it('converts lowers to English', function () {
-            expect(ru.fromEn('ntcn/')).to.eql('тест.');
-        });
+test('converts lowers from English', t => {
+    t.same(ru.toEn('еуыею'), 'test.');
+    t.end();
+});
 
-        it('converts uppers to English', function () {
-            expect(ru.fromEn('NTCN?&')).to.eql('ТЕСТ,?');
-        });
+test('converts uppers from English', t => {
+    t.same(ru.toEn('ЕУЫЕ№'), 'TEST#');
+    t.end();
+});
 
-        it('converts lowers from English', function () {
-            expect(ru.toEn('еуыею')).to.eql('test.');
-        });
-
-        it('converts uppers from English', function () {
-            expect(ru.toEn('ЕУЫЕ№')).to.eql('TEST#');
-        });
-
-        it('ignores unknown symbols', function () {
-            expect(ru.toEn('test!')).to.eql('test!');
-        });
-
-    });
-
+test('ignores unknown symbols', t => {
+    t.same(ru.toEn('test!'), 'test!');
+    t.end();
 });
