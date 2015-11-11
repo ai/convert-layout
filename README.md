@@ -1,6 +1,8 @@
 # Convert Layout [![Build Status][ci-img]][ci]
 
-Converts keyboard layouts, when user forgot to change it.
+A JavaScript library to convert text from one keyboard layout to other.
+
+Useful to prevent errors on english-only fields, like a credit card owner field.
 
 [ci-img]: https://travis-ci.org/ai/convert-layout.svg
 [ci]:     https://travis-ci.org/ai/convert-layout
@@ -19,14 +21,14 @@ bankcardName.keyup(function () {
 
 ## Usage
 
-There are 2 ways to load layout. If you need only one layout,
-just load file directly:
+There are two ways to load a keyboard layout definition.
+If you plan on using a single layout, just load the file directly:
 
 ```js
 var ru = require('convert-layout/ru');
 ```
 
-Also you can get objects with all layouts:
+Also you can get a object with all layouts:
 
 ```js
 var layouts = require('convert-layout');
@@ -42,22 +44,23 @@ ru.fromEn('ghbdtn') //=> "привет"
 
 ## Layouts
 
-Supported keyboard layouts:
+Currently supported keyboard layouts:
 
 * Belarusian
-* English QWERTY
+* English (QWERTY)
 * German
 * Kazakh
 * Russian
 * Spanish
 * Ukrainian
 
-If you want to add new keyboard layout:
+If you want to add a new keyboard layout definition:
 
 1. Fork a project. Create a branch.
-2. Add `CODE.js` file with layout buttons map. See example in `ru.js`.
+2. Add a `CODE.js` file with layout buttons map. See example in `ru.js`.
    Lower case letters will be converted to upper case automatically.
-   But all non-letters symbol should be added in both cases.
+   However, all non-letters symbols should be added both
+   in uppercase and lowercase.
 3. Add `CODE` key to `index.js`.
-4. Add layout to list above.
+4. Add layout to the list above.
 5. Send a pull request.

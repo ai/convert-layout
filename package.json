@@ -1,7 +1,7 @@
 {
   "name": "convert-layout",
   "version": "0.4.0",
-  "description": "Convert keyboard layouts, when user forget to change it",
+  "description": "Converts text from one keyboard layout to other",
   "keywords": [
     "keyboard",
     "keyboard layout",
