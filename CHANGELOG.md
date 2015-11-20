@@ -1,3 +1,6 @@
+## 0.4.1
+* Fix Russian, Belarusian and Ukrainian layouts (by Dmitry Kirilyuk).
+
 ## 0.4
 * Add Spanish layout (by Ismael Martínez).
 * Add Kazakh layout (by cyhalothrin).

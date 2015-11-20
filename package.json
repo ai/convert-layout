@@ -1,6 +1,6 @@
 {
   "name": "convert-layout",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Converts text from one keyboard layout to other",
   "keywords": [
     "keyboard",
@@ -20,7 +20,7 @@
   "repository": "ai/convert-layout",
   "devDependencies": {
     "eslint": "1.9.0",
-    "ava":    "0.4.2"
+    "ava":    "0.5.0"
   },
   "scripts": {
     "test": "ava && eslint *.js"
