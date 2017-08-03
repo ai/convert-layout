@@ -8,3 +8,4 @@ yarn.lock
 
 test.js
 .travis.yml
+.yaspellerrc

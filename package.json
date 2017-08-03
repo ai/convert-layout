@@ -36,16 +36,21 @@
   },
   "scripts": {
     "lint-staged": "lint-staged",
+    "spellcheck": "yaspeller-ci *.md",
     "lint": "eslint *.js",
-    "test": "ava && yarn lint"
+    "test": "ava && yarn lint && yrn spellcheck"
   },
   "eslintConfig": {
     "extends": "eslint-config-logux/browser"
   },
   "lint-staged": {
+    "*.md": "yaspeller-ci",
     "*.js": "eslint"
   },
   "pre-commit": [
     "lint-staged"
-  ]
+  ],
+  "dependencies": {
+    "yaspeller-ci": "^0.6.0"
+  }
 }
