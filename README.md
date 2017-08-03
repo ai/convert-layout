@@ -11,7 +11,7 @@ Useful to prevent errors on english-only fields, like a credit card owner field.
 var ru = require('convert-layout/ru');
 
 bankcardName.keyup(function () {
-    bankcardName.value = ru.toEn(bankcardName.value);
+  bankcardName.value = ru.toEn(bankcardName.value);
 });
 ```
 
