@@ -53,6 +53,7 @@ Currently supported keyboard layouts:
 * Russian
 * Spanish
 * Ukrainian
+* Hebrew
 
 If you want to add a new keyboard layout definition:
 
