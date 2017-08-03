@@ -20,10 +20,23 @@
   "license": "MIT",
   "repository": "ai/convert-layout",
   "devDependencies": {
-    "eslint": "1.9.0",
-    "ava":    "0.5.0"
+    "ava": "0.5.0",
+    "eslint": "^4.3.0",
+    "eslint-config-logux": "^16.0.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-es5": "^1.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jest": "^20.0.3",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-standard": "^3.0.1"
   },
   "scripts": {
-    "test": "ava && eslint *.js"
+    "lint": "eslint *.js",
+    "test": "ava && yarn lint"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-logux/browser"
   }
 }

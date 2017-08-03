@@ -1,9 +1,9 @@
-module.exports = {
-  by: require('./by'),
-  de: require('./de'),
-  es: require('./es'),
-  kk: require('./kk'),
-  ru: require('./ru'),
-  uk: require('./uk'),
-  he: require('./he')
-};
+var by = require('./by')
+var de = require('./de')
+var es = require('./es')
+var kk = require('./kk')
+var ru = require('./ru')
+var uk = require('./uk')
+var he = require('./he')
+
+module.exports = { by: by, de: de, es: es, kk: kk, ru: ru, uk: uk, he: he }

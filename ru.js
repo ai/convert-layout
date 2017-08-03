@@ -1,4 +1,4 @@
-var convert = require('./convert');
+var convert = require('./convert')
 
 var map = {
   'q': 'й',
@@ -49,6 +49,6 @@ var map = {
   '$': ';',
   '^': ':',
   '&': '?'
-};
+}
 
-module.exports = convert(map);
+module.exports = convert(map)
