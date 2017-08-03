@@ -30,13 +30,22 @@
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-security": "^1.4.0",
-    "eslint-plugin-standard": "^3.0.1"
+    "eslint-plugin-standard": "^3.0.1",
+    "lint-staged": "^4.0.2",
+    "pre-commit": "^1.2.2"
   },
   "scripts": {
+    "lint-staged": "lint-staged",
     "lint": "eslint *.js",
     "test": "ava && yarn lint"
   },
   "eslintConfig": {
     "extends": "eslint-config-logux/browser"
-  }
+  },
+  "lint-staged": {
+    "*.js": "eslint"
+  },
+  "pre-commit": [
+    "lint-staged"
+  ]
 }
