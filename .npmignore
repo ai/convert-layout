@@ -6,6 +6,7 @@ npm-debug.log
 yarn-error.log
 yarn.lock
 
-test.js
+*.test.js
 .travis.yml
 .yaspellerrc
+coverage/

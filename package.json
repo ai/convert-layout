@@ -20,7 +20,6 @@
   "license": "MIT",
   "repository": "ai/convert-layout",
   "devDependencies": {
-    "ava": "0.5.0",
     "eslint": "^4.3.0",
     "eslint-config-logux": "^16.0.0",
     "eslint-config-standard": "^10.2.1",
@@ -31,6 +30,7 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-standard": "^3.0.1",
+    "jest": "^20.0.4",
     "lint-staged": "^4.0.2",
     "pre-commit": "^1.2.2"
   },
@@ -38,7 +38,14 @@
     "lint-staged": "lint-staged",
     "spellcheck": "yaspeller-ci *.md",
     "lint": "eslint *.js",
-    "test": "ava && yarn lint && yrn spellcheck"
+    "test": "jest --coverage && yarn lint && yarn spellcheck"
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "statements": 100
+      }
+    }
   },
   "eslintConfig": {
     "extends": "eslint-config-logux/browser"
