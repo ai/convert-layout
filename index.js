@@ -4,5 +4,6 @@ module.exports = {
     es: require('./es'),
     kk: require('./kk'),
     ru: require('./ru'),
-    uk: require('./uk')
+    uk: require('./uk'),
+    he: require('./he')
 };
