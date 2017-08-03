@@ -28,7 +28,7 @@ If you plan on using a single layout, just load the file directly:
 var ru = require('convert-layout/ru');
 ```
 
-Also you can get a object with all layouts:
+Also you can get a object with all layouts (but app size will be bigger):
 
 ```js
 var layouts = require('convert-layout');
