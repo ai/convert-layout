@@ -1,28 +1,27 @@
-function replace (map) {
-  return function (str) {
-    return str.split('').map(function (i) {
-      return map[i] || i
-    }).join('')
-  }
-}
-
-function convert (map) {
+module.exports = function convert (map) {
   var reverse = { }
   var full = { }
+  var key
 
-  for (var key in map) {
-    var value = map[key]
-    full[key] = value
-    reverse[value] = key
-
-    var upper = key.toUpperCase()
-    if (upper !== key) {
-      full[upper] = value.toUpperCase()
-      reverse[full[upper]] = upper
-    }
+  for (key in map) {
+    full[key.toUpperCase()] = map[key].toUpperCase()
+    full[key] = map[key]
   }
 
-  return { fromEn: replace(full), toEn: replace(reverse) }
-}
+  for (key in full) {
+    reverse[full[key]] = key
+  }
 
-module.exports = convert
+  return {
+    fromEn: function (str) {
+      return str.replace(/./g, function (i) {
+        return full[i] || i
+      })
+    },
+    toEn: function (str) {
+      return str.replace(/./g, function (i) {
+        return reverse[i] || i
+      })
+    }
+  }
+}
