@@ -1,5 +1,3 @@
-var convert = require('./convert')
-
 var map = {
   '~': ')',
   '!': '!',
@@ -69,4 +67,4 @@ var map = {
   '/': '№'
 }
 
-module.exports = convert(map)
+module.exports = map

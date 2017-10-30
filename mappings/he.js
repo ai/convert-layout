@@ -1,5 +1,3 @@
-var convert = require('./convert')
-
 var map = {
   'q': '/',
   'w': "'",
@@ -45,4 +43,4 @@ var map = {
   '?': '?'
 }
 
-module.exports = convert(map)
+module.exports = map
