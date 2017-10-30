@@ -1,11 +1,3 @@
-function replace (map) {
-  return function (str) {
-    return str.replace(/./g, function (i) {
-      return map[i] || i
-    })
-  }
-}
-
 function convert (map) {
   var reverse = { }
   var full = { }
@@ -20,7 +12,18 @@ function convert (map) {
     reverse[full[key]] = key
   }
 
-  return { fromEn: replace(full), toEn: replace(reverse) }
+  return {
+    fromEn: function (str) {
+      return str.replace(/./g, function (i) {
+        return full[i] || i
+      })
+    },
+    toEn: function (str) {
+      return str.replace(/./g, function (i) {
+        return reverse[i] || i
+      })
+    }
+  }
 }
 
 module.exports = convert

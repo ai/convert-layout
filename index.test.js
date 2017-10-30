@@ -24,3 +24,7 @@ it('converts uppers from English', function () {
 it('ignores unknown symbols', function () {
   expect(ru.toEn('test!')).toEqual('test!')
 })
+
+it('ignores unknown symbols in reverse direction', function () {
+  expect(ru.fromEn('проверка!')).toEqual('проверка!')
+})
