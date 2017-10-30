@@ -1,8 +1,8 @@
 function replace (map) {
   return function (str) {
-    return str.split('').map(function (i) {
+    return str.replace(/./g, function (i) {
       return map[i] || i
-    }).join('')
+    })
   }
 }
 
