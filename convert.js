@@ -9,17 +9,15 @@ function replace (map) {
 function convert (map) {
   var reverse = { }
   var full = { }
+  var key
 
-  for (var key in map) {
-    var value = map[key]
-    full[key] = value
-    reverse[value] = key
+  for (key in map) {
+    full[key.toUpperCase()] = map[key].toUpperCase()
+    full[key] = map[key]
+  }
 
-    var upper = key.toUpperCase()
-    if (upper !== key) {
-      full[upper] = value.toUpperCase()
-      reverse[full[upper]] = upper
-    }
+  for (key in full) {
+    reverse[full[key]] = key
   }
 
   return { fromEn: replace(full), toEn: replace(reverse) }
