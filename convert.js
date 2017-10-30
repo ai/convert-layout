@@ -1,4 +1,4 @@
-function convert (map) {
+module.exports = function convert (map) {
   var reverse = { }
   var full = { }
   var key
@@ -25,5 +25,3 @@ function convert (map) {
     }
   }
 }
-
-module.exports = convert
