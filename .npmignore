@@ -11,6 +11,6 @@ yarn.lock
 .travis.yml
 .yaspellerrc
 coverage/
-tools/
 
+build.js
 /[a-z][a-z].json

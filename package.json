@@ -42,7 +42,7 @@
     "spell": "yaspeller-ci *.md",
     "lint": "eslint *.js",
     "unit": "jest --coverage",
-    "build": "node ./tools/build",
+    "build": "node build",
     "test": "yarn build && yarn unit && yarn lint && yarn spell && size-limit"
   },
   "jest": {
@@ -53,7 +53,10 @@
     }
   },
   "eslintConfig": {
-    "extends": "eslint-config-logux/browser"
+    "extends": "eslint-config-logux/browser",
+    "rules": {
+      "quotes": "off"
+    }
   },
   "lint-staged": {
     "*.md": "yaspeller-ci",
