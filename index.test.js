@@ -1,4 +1,4 @@
-var main = require('./')
+var main = require('.')
 var ru = require('./ru')
 
 it('has all languages in index', function () {

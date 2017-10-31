@@ -1,26 +1,26 @@
-module.exports = function convert (map) {
+module.exports = function convert (keysStr, valuesStr) {
   var reverse = { }
   var full = { }
-  var key
+  var i
 
-  for (key in map) {
-    full[key.toUpperCase()] = map[key].toUpperCase()
-    full[key] = map[key]
+  for (i = keysStr.length; i--;) {
+    full[keysStr[i].toUpperCase()] = valuesStr[i].toUpperCase()
+    full[keysStr[i]] = valuesStr[i]
   }
 
-  for (key in full) {
-    reverse[full[key]] = key
+  for (i in full) {
+    reverse[full[i]] = i
   }
 
   return {
     fromEn: function (str) {
-      return str.replace(/./g, function (i) {
-        return full[i] || i
+      return str.replace(/./g, function (ch) {
+        return full[ch] || ch
       })
     },
     toEn: function (str) {
-      return str.replace(/./g, function (i) {
-        return reverse[i] || i
+      return str.replace(/./g, function (ch) {
+        return reverse[ch] || ch
       })
     }
   }
