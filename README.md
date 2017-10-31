@@ -1,11 +1,8 @@
-# Convert Layout [![Build Status][ci-img]][ci]
+# Convert Layout
 
 A JavaScript library to convert text from one keyboard layout to other.
 
 Useful to prevent errors on english-only fields, like a credit card owner field.
-
-[ci-img]: https://travis-ci.org/ai/convert-layout.svg
-[ci]:     https://travis-ci.org/ai/convert-layout
 
 ```js
 var ru = require('convert-layout/ru');
