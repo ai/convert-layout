@@ -1,5 +1,4 @@
 {
-  "private": true,
   "name": "convert-layout",
   "version": "0.5.0",
   "description": "Converts text from one keyboard layout to other",
@@ -34,7 +33,6 @@
     "jest": "^21.2.1",
     "lint-staged": "^4.3.0",
     "pre-commit": "^1.2.2",
-    "rimraf": "^2.6.2",
     "size-limit": "^0.12.0",
     "yaspeller-ci": "^0.7.0"
   },
@@ -42,8 +40,9 @@
     "lint-staged": "lint-staged",
     "spellcheck": "yaspeller-ci *.md",
     "lint": "eslint *.js",
-    "build": "node ./build",
-    "test": "yarn build && jest --coverage && yarn lint && yarn spellcheck && size-limit"
+    "build": "node ./tools/build",
+    "test": "yarn build && jest --coverage && yarn lint && yarn spellcheck && size-limit",
+    "prepublish": "yarn test"
   },
   "jest": {
     "coverageThreshold": {
@@ -64,7 +63,7 @@
   ],
   "size-limit": [
     {
-      "path": "dist/ru.js",
+      "path": "ru.js",
       "limit": "265 B"
     }
   ]

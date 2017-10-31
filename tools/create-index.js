@@ -1,5 +1,6 @@
 module.exports = function createIndex (mappingNames) {
   return (
+    '/* eslint-disable global-require */\n' +
     'module.exports = {\n' +
     (mappingNames
       .map(function (name) {
@@ -7,6 +8,6 @@ module.exports = function createIndex (mappingNames) {
       })
       .join(',\n')
     ) +
-    '\n}'
+    '\n}\n'
   )
 }
