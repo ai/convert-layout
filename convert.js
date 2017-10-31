@@ -1,11 +1,11 @@
-module.exports = function convert (keysStr, valuesStr) {
+module.exports = function convert (keys, values) {
   var reverse = { }
   var full = { }
   var i
 
-  for (i = keysStr.length; i--;) {
-    full[keysStr[i].toUpperCase()] = valuesStr[i].toUpperCase()
-    full[keysStr[i]] = valuesStr[i]
+  for (i = keys.length; i--;) {
+    full[keys[i].toUpperCase()] = values[i].toUpperCase()
+    full[keys[i]] = values[i]
   }
 
   for (i in full) {
