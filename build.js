@@ -67,22 +67,35 @@ fs.writeFileSync(
       )
       .toString('utf-8')
   )
-)
+);
 
 // Copy files as-is
-fs.copyFileSync(
-  resolvePath('CHANGELOG.md'),
-  resolvePath('dist', 'CHANGELOG.md')
-)
-fs.copyFileSync(
-  resolvePath('README.md'),
-  resolvePath('dist', 'README.md')
-)
-fs.copyFileSync(
-  resolvePath('LICENSE'),
-  resolvePath('dist', 'LICENSE')
-)
-fs.copyFileSync(
-  resolvePath('src', 'convert.js'),
-  resolvePath('dist', 'convert.js')
-)
+[
+  {
+    from: resolvePath('CHANGELOG.md'),
+    to: resolvePath('dist', 'CHANGELOG.md')
+  },
+  {
+    from: resolvePath('README.md'),
+    to: resolvePath('dist', 'README.md')
+  },
+  {
+    from: resolvePath('LICENSE'),
+    to: resolvePath('dist', 'LICENSE')
+  },
+  {
+    from: resolvePath('src', 'convert.js'),
+    to: resolvePath('dist', 'convert.js')
+  }
+].forEach(function (def) {
+  fs.copyFile(
+    def.from,
+    def.to,
+    function (err) {
+      if (err) {
+        console.error(err)
+        process.exit(1)
+      }
+    }
+  )
+})
