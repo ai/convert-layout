@@ -88,14 +88,9 @@ fs.writeFileSync(
     to: resolvePath('dist', 'convert.js')
   }
 ].forEach(function (def) {
-  fs.copyFile(
-    def.from,
+  // fs.copyFile is supported only in Node >= v8.5.0
+  fs.writeFileSync(
     def.to,
-    function (err) {
-      if (err) {
-        console.error(err)
-        process.exit(1)
-      }
-    }
+    fs.readFileSync(def.from)
   )
 })
