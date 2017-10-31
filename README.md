@@ -58,10 +58,11 @@ Currently supported keyboard layouts:
 If you want to add a new keyboard layout definition:
 
 1. Fork a project. Create a branch.
-2. Add a `CODE.js` file with layout buttons map. See example in `ru.js`.
+2. Add a `src/layouts/CODE.json` file with layout buttons map.
+   See example in `src/layouts/ru.js`.
    Lower case letters will be converted to upper case automatically.
    However, all non-letters symbols should be added both
    in uppercase and lowercase.
-3. Add `CODE` key to `index.js`.
+3. Run `yarn test`. Project will be built automatically.
 4. Add layout to the list above.
 5. Send a pull request.

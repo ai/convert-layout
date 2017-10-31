@@ -1,5 +1,5 @@
-var main = require('./')
-var ru = require('./ru')
+var main = require('../dist/')
+var ru = require('../dist/ru')
 
 it('has all languages in index', function () {
   expect(main.ru).toEqual(ru)
