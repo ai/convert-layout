@@ -1,9 +1,12 @@
-## 0.4.1
-* Fix Russian, Belarusian and Ukrainian layouts (by Dmitry Kirilyuk).
+# Change Log
+This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 0.5
 * Add Hebrew layout (by Kugman).
 * Clean npm package from development files.
+
+## 0.4.1
+* Fix Russian, Belarusian and Ukrainian layouts (by Dmitry Kirilyuk).
 
 ## 0.4
 * Add Spanish layout (by Ismael Martínez).
