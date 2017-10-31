@@ -1,4 +1,4 @@
-var preferredOrder = '.exports='
+var preferredOrder = '.exports=func'
 
 // Chars in mapping strings has arbitrary order. We'll try to sort it in a way
 // it's better compressable by GZIP:

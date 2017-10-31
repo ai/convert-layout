@@ -64,7 +64,7 @@
   "size-limit": [
     {
       "path": "ru.js",
-      "limit": "265 B"
+      "limit": "264 B"
     }
   ]
 }
