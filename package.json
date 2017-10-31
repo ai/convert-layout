@@ -38,11 +38,12 @@
   },
   "scripts": {
     "lint-staged": "lint-staged",
-    "spellcheck": "yaspeller-ci *.md",
+    "prepublish": "yarn build",
+    "spell": "yaspeller-ci *.md",
     "lint": "eslint *.js",
+    "unit": "jest --coverage",
     "build": "node ./tools/build",
-    "test": "yarn build && jest --coverage && yarn lint && yarn spellcheck && size-limit",
-    "prepublish": "yarn test"
+    "test": "yarn build && yarn unit && yarn lint && yarn spell && size-limit"
   },
   "jest": {
     "coverageThreshold": {
