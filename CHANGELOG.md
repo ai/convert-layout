@@ -1,6 +1,9 @@
 # Change Log
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.5.1
+* Reduce library size (by Anton Khlynovskiy).
+
 ## 0.5
 * Add Hebrew layout (by Kugman).
 * Clean npm package from development files.
