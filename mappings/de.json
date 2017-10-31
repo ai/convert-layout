@@ -1,4 +1,4 @@
-var map = {
+{
   "q": "q",
   "w": "w",
   "e": "e",
@@ -55,5 +55,3 @@ var map = {
   "=": "´",
   "+": "`"
 }
-
-module.exports = map
