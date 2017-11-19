@@ -21,6 +21,7 @@
   "repository": "ai/convert-layout",
   "devDependencies": {
     "eslint": "^4.10.0",
+    "eslint-ci": "^0.1.0",
     "eslint-config-logux": "^16.2.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-es5": "^1.1.0",
@@ -40,7 +41,7 @@
     "prepack": "npm run build",
     "lint-staged": "lint-staged",
     "spell": "yaspeller-ci *.md",
-    "lint": "eslint *.js",
+    "lint": "eslint-ci *.js",
     "unit": "jest --coverage",
     "build": "node build.js",
     "test": "yarn build && yarn unit && yarn lint && yarn spell && size-limit"
