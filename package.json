@@ -34,7 +34,7 @@
     "jest": "^22.4.2",
     "lint-staged": "^7.0.0",
     "pre-commit": "^1.2.2",
-    "size-limit": "^0.16.0",
+    "size-limit": "^0.16.1",
     "yaspeller-ci": "^1.0.0"
   },
   "scripts": {
