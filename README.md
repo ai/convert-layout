@@ -17,6 +17,7 @@ bankcardName.keyup(function () {
        alt="Sponsored by Evil Martians" width="236" height="54">
 </a>
 
+
 ## Usage
 
 There are two ways to load a keyboard layout definition.
@@ -39,6 +40,7 @@ Every layout has `fromEn` and `toEn` methods:
 ru.toEn('руддщ')    //=> "hello"
 ru.fromEn('ghbdtn') //=> "привет"
 ```
+
 
 ## Layouts
 
