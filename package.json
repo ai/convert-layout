@@ -47,6 +47,7 @@
     "test": "yarn build && yarn unit && yarn lint && yarn spell && size-limit"
   },
   "jest": {
+    "testEnvironment": "node",
     "coverageThreshold": {
       "global": {
         "statements": 100
