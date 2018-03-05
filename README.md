@@ -48,6 +48,7 @@ Currently supported keyboard layouts:
 * English (QWERTY)
 * German
 * Kazakh
+* Korean
 * Russian
 * Spanish
 * Ukrainian
