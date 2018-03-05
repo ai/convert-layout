@@ -1,6 +1,9 @@
 # Change Log
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.6
+* Add Korean layout (by Pepe Becker).
+
 ## 0.5.1
 * Reduce library size (by Anton Khlynovskiy).
 
