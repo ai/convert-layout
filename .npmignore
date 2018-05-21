@@ -1,4 +1,7 @@
 .editorconfig
+.size-limit
+.eslintrc
+.lintstagedrc
 
 node_modules/
 npm-debug.log
