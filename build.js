@@ -13,7 +13,7 @@ fs
 var langs = fs
   .readdirSync(__dirname)
   .filter(function (file) {
-    return /^[a-z][a-z].json$/.test(file)
+    return /^([a-z][a-z]|dvorak|colemak).json$/.test(file)
   })
   .map(function (file) {
     return path.basename(file, '.json')

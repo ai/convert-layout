@@ -14,3 +14,5 @@ coverage/
 
 build.js
 /[a-z][a-z].json
+dvorak.json
+colemak.json
