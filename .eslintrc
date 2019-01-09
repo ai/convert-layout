@@ -1,6 +1,0 @@
-{
-  "extends": "@logux/eslint-config/browser",
-  "rules": {
-    "quotes": "off"
-  }
-}

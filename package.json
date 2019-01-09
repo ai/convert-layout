@@ -61,5 +61,47 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "size-limit": [
+    {
+      "path": "ru.js",
+      "limit": "264 B"
+    }
+  ],
+  "eslintConfig": {
+    "extends": "@logux/eslint-config/browser",
+    "rules": {
+      "quotes": "off"
+    }
+  },
+  "lint-staged": {
+    "*.md": "yaspeller-ci",
+    "*.js": "eslint"
+  },
+  "yaspeller": {
+    "lang": "en",
+    "ignoreCapitalization": true,
+    "dictionary": [
+      "Kirilyuk",
+      "Ismael",
+      "Martínez",
+      "cyhalothrin",
+      "Yury",
+      "Lebedev",
+      "Vitalik",
+      "Vojtehovsky",
+      "Valery",
+      "Bogdanov",
+      "Kugman",
+      "npm",
+      "Versioning",
+      "Anton",
+      "Khlynovskiy",
+      "Pepe",
+      "Becker",
+      "Colemak",
+      "Abhinav",
+      "Kasamsetty"
+    ]
   }
 }
