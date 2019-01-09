@@ -1,6 +1,10 @@
 # Change Log
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.8
+* Add Persian layout (by Mohammad Kazem Zaker).
+* Reduce `package.json` size.
+
 ## 0.7
 * Add Dvorak layout (by Abhinav Kasamsetty).
 * Add Colemak layout (by Abhinav Kasamsetty).
