@@ -14,7 +14,9 @@
     "kazakh",
     "spanish",
     "ukrainian",
-    "hebrew"
+    "hebrew",
+    "persian",
+    "farsi"
   ],
   "author": "Andrey Sitnik <andrey@sitnik.ru>",
   "license": "MIT",
