@@ -55,6 +55,7 @@ Currently supported keyboard layouts:
 * Spanish
 * Ukrainian
 * Hebrew
+* Persian (fa)
 
 If you want to add a new keyboard layout definition:
 
