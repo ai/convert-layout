@@ -18,11 +18,21 @@
     "persian",
     "farsi"
   ],
+  "scripts": {
+    "prepack": "npm run build",
+    "lint-staged": "lint-staged",
+    "spell": "yaspeller-ci *.md",
+    "lint": "eslint-ci *.js",
+    "unit": "jest --coverage",
+    "build": "node build.js",
+    "test": "yarn build && yarn unit && yarn lint && yarn spell && size-limit"
+  },
   "author": "Andrey Sitnik <andrey@sitnik.ru>",
   "license": "MIT",
   "repository": "ai/convert-layout",
   "devDependencies": {
     "@logux/eslint-config": "^27.0.0",
+    "clean-publish": "^1.1.0",
     "eslint": "^5.12.0",
     "eslint-ci": "^1.0.0",
     "eslint-config-standard": "^12.0.0",
@@ -38,15 +48,6 @@
     "pre-commit": "^1.2.2",
     "size-limit": "^0.21.1",
     "yaspeller-ci": "^1.0.0"
-  },
-  "scripts": {
-    "prepack": "npm run build",
-    "lint-staged": "lint-staged",
-    "spell": "yaspeller-ci *.md",
-    "lint": "eslint-ci *.js",
-    "unit": "jest --coverage",
-    "build": "node build.js",
-    "test": "yarn build && yarn unit && yarn lint && yarn spell && size-limit"
   },
   "jest": {
     "testEnvironment": "node",
