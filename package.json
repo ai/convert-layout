@@ -23,8 +23,8 @@
     "build": "node build.js",
     "api": "documentation build *.js -f md -o api.md",
     "spell": "yarn api && yaspeller-ci *.md",
-    "clean": "rimraf api.md coverage/",
-    "test": "jest --coverage && eslint-ci . && size-limit && yarn spell"
+    "clean": "rimraf api.md coverage/ index.js colemak.js dvorak.js ??.js",
+    "test": "yarn build && jest --coverage && eslint-ci . && size-limit && yarn spell"
   },
   "author": "Andrey Sitnik <andrey@sitnik.ru>",
   "license": "MIT",
