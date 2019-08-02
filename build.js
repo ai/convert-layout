@@ -75,8 +75,7 @@ for (var i = 0; i < langs.length; i++) {
   fs.writeFileSync(path.join(__dirname, langs[i] + '.js'), toJs(mapping))
 }
 
-var index = '/* eslint-disable global-require */\n' +
-            'module.exports = {\n' +
+var index = 'module.exports = {\n' +
             (langs
               .map(function (name) {
                 return '  ' + name + ': require(\'./' + name + '\')'
