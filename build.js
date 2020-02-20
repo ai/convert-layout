@@ -4,7 +4,7 @@ var path = require('path')
 fs
   .readdirSync(__dirname)
   .filter(function (file) {
-    return /^[a-z][a-z].js$/.test(file) || file === 'index.js'
+    return /^[a-z]{2}.js$/.test(file) || file === 'index.js'
   })
   .forEach(function (file) {
     fs.unlinkSync(path.join(__dirname, file))
@@ -13,7 +13,7 @@ fs
 var langs = fs
   .readdirSync(__dirname)
   .filter(function (file) {
-    return /^([a-z][a-z]|dvorak|colemak).json$/.test(file)
+    return /^([a-z]{2}|dvorak|colemak).json$/.test(file)
   })
   .map(function (file) {
     return path.basename(file, '.json')
