@@ -1,6 +1,9 @@
 # Change Log
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.8.1
+* Fix Korean layout (by @benjaminwy).
+
 ## 0.8
 * Add Persian layout (by Mohammad Kazem Zaker).
 * Reduce `package.json` size.
