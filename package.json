@@ -50,7 +50,8 @@
     "jest": "^25.1.0",
     "lint-staged": "^10.0.7",
     "rimraf": "^3.0.2",
-    "size-limit": "^4.0.0"
+    "size-limit": "^4.0.0",
+    "yaspeller": "^6.0.2"
   },
   "jest": {
     "testEnvironment": "node",
