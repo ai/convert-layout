@@ -21,9 +21,8 @@
   "scripts": {
     "prepack": "npm run build",
     "build": "node build.js",
-    "api": "documentation build *.js -f md -o api.md",
-    "spell": "yarn api && yaspeller *.md",
-    "clean": "rimraf api.md coverage/ index.js colemak.js dvorak.js ??.js",
+    "spell": "yaspeller *.md",
+    "clean": "rimraf coverage/ index.js colemak.js dvorak.js ??.js",
     "test": "yarn build && jest --coverage && eslint . && size-limit && yarn spell"
   },
   "author": "Andrey Sitnik <andrey@sitnik.ru>",
@@ -34,7 +33,6 @@
     "@logux/sharec-config": "^0.7.4",
     "@size-limit/preset-small-lib": "^4.6.0",
     "clean-publish": "^1.1.8",
-    "documentation": "^13.0.2",
     "eslint": "^7.10.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.22.1",
