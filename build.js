@@ -1,29 +1,21 @@
-var fs = require('fs')
-var path = require('path')
+let { writeFileSync, readFileSync, readdirSync, unlinkSync } = require('fs')
+let { join, basename } = require('path')
 
-fs
-  .readdirSync(__dirname)
-  .filter(function (file) {
-    return /^[a-z]{2}.js$/.test(file) || file === 'index.js'
-  })
-  .forEach(function (file) {
-    fs.unlinkSync(path.join(__dirname, file))
+readdirSync(__dirname)
+  .filter(file => /^[a-z]{2}.js$/.test(file) || file === 'index.js')
+  .forEach(file => {
+    unlinkSync(join(__dirname, file))
   })
 
-var langs = fs
-  .readdirSync(__dirname)
-  .filter(function (file) {
-    return /^([a-z]{2}|dvorak|colemak).json$/.test(file)
-  })
-  .map(function (file) {
-    return path.basename(file, '.json')
-  })
+let langs = readdirSync(__dirname)
+  .filter(file => /^([a-z]{2}|dvorak|colemak).json$/.test(file))
+  .map(file => basename(file, '.json'))
   .sort()
 
-var preferredOrder = '.exports=func'
+let preferredOrder = '.exports=func'
 
 function sortHash (mappingTuple) {
-  var index = preferredOrder.indexOf(mappingTuple[0])
+  let index = preferredOrder.indexOf(mappingTuple[0])
   if (index > -1) {
     return '\u0000' + String.fromCharCode(index)
   }
@@ -43,44 +35,40 @@ function sortFn (a, b) {
 }
 
 function toJs (map) {
-  var tuples = []
-  for (var key in map) {
+  let tuples = []
+  for (let key in map) {
     if (key === map[key]) {
       continue
     }
-    tuples.push([
-      key,
-      map[key]
-    ])
+    tuples.push([key, map[key]])
   }
   tuples.sort(sortFn)
-  var keys = tuples.map(function (tuple) {
-    return tuple[0]
-  }).join('')
-  var values = tuples.map(function (tuple) {
-    return tuple[1]
-  }).join('')
+  let keys = tuples.map(tuple => tuple[0]).join('')
+  let values = tuples.map(tuple => tuple[1]).join('')
 
-  return 'module.exports = require(\'./convert\')(\n' +
-         '  ' + JSON.stringify(keys) + ',\n' +
-         '  ' + JSON.stringify(values) + '\n' +
-         ')\n'
-}
-
-for (var i = 0; i < langs.length; i++) {
-  var mapping = JSON.parse(fs
-    .readFileSync(path.join(__dirname, langs[i] + '.json'))
-    .toString('utf-8')
+  return (
+    "module.exports = require('./convert')(\n" +
+    '  ' +
+    JSON.stringify(keys) +
+    ',\n' +
+    '  ' +
+    JSON.stringify(values) +
+    '\n' +
+    ')\n'
   )
-  fs.writeFileSync(path.join(__dirname, langs[i] + '.js'), toJs(mapping))
 }
 
-var index = 'module.exports = {\n' +
-            (langs
-              .map(function (name) {
-                return '  ' + name + ': require(\'./' + name + '\')'
-              })
-              .join(',\n')
-            ) + '\n' +
-            '}\n'
-fs.writeFileSync(path.join(__dirname, 'index.js'), index)
+for (let lang of langs) {
+  let mapping = JSON.parse(
+    readFileSync(join(__dirname, lang + '.json')).toString('utf-8')
+  )
+  writeFileSync(join(__dirname, lang + '.js'), toJs(mapping))
+}
+
+writeFileSync(
+  join(__dirname, 'index.js'),
+  'module.exports = {\n' +
+    langs.map(name => '  ' + name + ": require('./" + name + "')").join(',\n') +
+    '\n' +
+    '}\n'
+)

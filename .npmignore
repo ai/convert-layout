@@ -1,12 +1,8 @@
-node_modules/
 yarn-error.log
 yarn.lock
 
-.editorconfig
 test/
-*.test.js
 coverage/
-.travis.yml
 api.md
 
 build.js

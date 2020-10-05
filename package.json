@@ -30,28 +30,28 @@
   "license": "MIT",
   "repository": "ai/convert-layout",
   "devDependencies": {
-    "@logux/eslint-config": "^35.0.4",
-    "@logux/sharec-config": "^0.5.7",
-    "@size-limit/preset-small-lib": "^4.0.2",
-    "clean-publish": "^1.1.5",
-    "documentation": "^12.1.4",
-    "eslint": "^6.8.0",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-es5": "^1.5.0",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-jest": "^23.7.0",
-    "eslint-plugin-node": "^11.0.0",
-    "eslint-plugin-prefer-let": "^1.0.1",
+    "@logux/eslint-config": "^40.0.5",
+    "@logux/sharec-config": "^0.7.4",
+    "@size-limit/preset-small-lib": "^4.6.0",
+    "clean-publish": "^1.1.8",
+    "documentation": "^13.0.2",
+    "eslint": "^7.10.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.0.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prefer-let": "^1.1.0",
+    "eslint-plugin-prettierx": "^0.14.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-security": "^1.4.0",
     "eslint-plugin-standard": "^4.0.1",
-    "eslint-plugin-unicorn": "^16.1.1",
-    "husky": "^4.2.3",
-    "jest": "^25.1.0",
-    "lint-staged": "^10.0.7",
+    "eslint-plugin-unicorn": "^22.0.0",
+    "husky": "^4.3.0",
+    "jest": "^26.5.0",
+    "lint-staged": "^10.4.0",
     "rimraf": "^3.0.2",
-    "size-limit": "^4.0.0",
-    "yaspeller": "^6.0.2"
+    "size-limit": "^4.6.0",
+    "yaspeller": "^7.0.0"
   },
   "jest": {
     "testEnvironment": "node",
@@ -73,7 +73,7 @@
     }
   ],
   "eslintConfig": {
-    "extends": "@logux/eslint-config/browser",
+    "extends": "@logux/eslint-config",
     "rules": {
       "quotes": "off"
     },
@@ -83,14 +83,20 @@
           "index.js"
         ],
         "rules": {
-          "global-require": "off"
+          "node/global-require": "off"
         }
       }
     ]
   },
+  "eslintIgnore": [
+    "convert.js",
+    "[a-z][a-z].js",
+    "dvorak.js",
+    "colemak.js"
+  ],
   "lint-staged": {
     "*.md": "yaspeller",
-    "*.js": "eslint"
+    "build.js": "eslint --fix"
   },
   "yaspeller": {
     "lang": "en",
@@ -106,6 +112,6 @@
   },
   "sharec": {
     "config": "@logux/sharec-config",
-    "version": "0.5.7"
+    "version": "0.7.4"
   }
 }
