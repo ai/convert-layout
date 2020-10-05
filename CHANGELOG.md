@@ -1,6 +1,9 @@
 # Change Log
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.8.2
+* Fixed Ukrainian layout (by Kirill Romanov).
+
 ## 0.8.1
 * Fix Korean layout (by @benjaminwy).
 
