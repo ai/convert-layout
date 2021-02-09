@@ -46,6 +46,7 @@ ru.fromEn('ghbdtn') //=> "привет"
 
 Currently supported keyboard layouts:
 
+* Arabic
 * Belarusian
 * English (QWERTY, Dvorak, Colemak)
 * German
