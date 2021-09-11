@@ -1,6 +1,9 @@
 # Change Log
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.10
+* Added Czech layout (by @krasnyd).
+
 ## 0.9
 * Added Arabic layout (by Eng aam).
 
