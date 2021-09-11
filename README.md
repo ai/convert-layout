@@ -57,6 +57,7 @@ Currently supported keyboard layouts:
 * Ukrainian
 * Hebrew
 * Persian
+* Czech
 
 If you want to add a new keyboard layout definition:
 
