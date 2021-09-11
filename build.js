@@ -14,7 +14,7 @@ let langs = readdirSync(__dirname)
 
 let preferredOrder = '.exports=func'
 
-function sortHash (mappingTuple) {
+function sortHash(mappingTuple) {
   let index = preferredOrder.indexOf(mappingTuple[0])
   if (index > -1) {
     return '\u0000' + String.fromCharCode(index)
@@ -22,7 +22,7 @@ function sortHash (mappingTuple) {
   return '\u0020' + mappingTuple[0]
 }
 
-function sortFn (a, b) {
+function sortFn(a, b) {
   a = sortHash(a)
   b = sortHash(b)
   if (a < b) {
@@ -34,7 +34,7 @@ function sortFn (a, b) {
   }
 }
 
-function toJs (map) {
+function toJs(map) {
   let tuples = []
   for (let key in map) {
     if (key === map[key]) {
