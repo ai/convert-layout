@@ -50,6 +50,7 @@ Currently supported keyboard layouts:
 * Belarusian
 * English (QWERTY, Dvorak, Colemak)
 * German
+* Greek
 * Kazakh
 * Korean
 * Russian
