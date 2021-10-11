@@ -1,6 +1,9 @@
 # Change Log
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.11
+* Added Greek support (by @precondition).
+
 ## 0.10
 * Added Czech layout (by @krasnyd).
 
