@@ -1,6 +1,9 @@
 # Change Log
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.11.1
+* Fixed Greek file.
+
 ## 0.11
 * Added Greek support (by @precondition).
 
