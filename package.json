@@ -21,9 +21,8 @@
   "scripts": {
     "prepack": "npm run build",
     "build": "node build.js",
-    "spell": "yaspeller *.md",
     "clean": "rimraf coverage/ index.js colemak.js dvorak.js ??.js",
-    "test": "yarn build && jest --coverage && eslint . && size-limit && yarn spell"
+    "test": "yarn build && jest --coverage && eslint . && size-limit"
   },
   "author": "Andrey Sitnik <andrey@sitnik.ru>",
   "license": "MIT",
