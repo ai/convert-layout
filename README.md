@@ -1,5 +1,7 @@
 # Convert Layout
 
+**DEPRECADED:** Use `KeyboardEvent#code` in `keyup` event.
+
 A JavaScript library to convert text from one keyboard layout to other.
 
 Useful to prevent errors on english-only fields, like a credit card owner field.
