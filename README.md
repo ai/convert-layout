@@ -55,6 +55,7 @@ Currently supported keyboard layouts:
 * Korean
 * Russian
 * Spanish
+* Turkish
 * Ukrainian
 * Hebrew
 * Persian
