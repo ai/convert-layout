@@ -49,12 +49,15 @@ Currently supported keyboard layouts:
 * Arabic
 * Belarusian
 * English (QWERTY, Dvorak, Colemak)
+* French
+* Italian
 * German
 * Greek
 * Kazakh
 * Korean
 * Russian
 * Spanish
+* Swedish
 * Turkish
 * Ukrainian
 * Hebrew
