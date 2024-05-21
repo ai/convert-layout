@@ -58,6 +58,7 @@ Currently supported keyboard layouts:
 * Russian
 * Spanish
 * Swedish
+* Turkish
 * Ukrainian
 * Hebrew
 * Persian
